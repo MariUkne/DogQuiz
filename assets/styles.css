@@ -3,4 +3,25 @@ body {
     color: #333;
     text-align: center;
     margin: 0; 
+    background-color: rgb(240, 239, 238);
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #618b83;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
