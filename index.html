@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your knowledge of dogs in this fun quiz game.">
+    <meta name="keywords" content="dogs, dog quiz, dogbreeds, quiz game">
     <title>Dog Quiz</title>
+    <!-- CSS Style-->
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
+
         <header>
             <h1 class="logo">Dog Quiz</h1>
         </header>
+
+        <!-- Main section -->
+
         <main>
             <img src="assets/images/pexels-edd1egalaxy-3628100.jpg" alt="Dogs" class="dog-image">
+
+        <!-- Quiz Section -->
+
+        <div id="quiz-container">
+            <div id="question-container">
+                <h2 id="question">Question</h2>
+                <!-- Answear buttons -->
+                <div id="answer-button" class="btn-container">
+                </div>
+            </div>
+
+            <!-- Timer for the game -->
+            <div id="controls">
+                <span id="timer">15</span> seconds left
+            </div>
+        </div>
+            <!-- The Game Score -->
+            <div id="score">
+                <p>Correct: <span id="correct">0</span></p>
+                <p>Incorrect: <span id="incorrect">0</span></p>
+            </div>
         </main>
     </div>
     
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
 </body>
 </html>
