@@ -54,14 +54,6 @@ button {
     transition: 0.3s;
 }
 
-button.correct {
-    background-color: green;
-}
-
-button.incorrect {
-    background-color: red;
-}
-
 #controls {
     margin-top: 20px;
 }
