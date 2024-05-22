@@ -53,3 +53,25 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
+
+button.correct {
+    background-color: green;
+}
+
+button.incorrect {
+    background-color: red;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+}
