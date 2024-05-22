@@ -1,7 +1,7 @@
 let questions = [
     {
         question: 'Which dog breed is the largest?',
-        answears: [
+        answers: [
             { text: 'Chihuahua', correct: false },
             { text: 'Siberian Husky', correct: false },
             { text: 'Great Dane', correct: true },
@@ -38,7 +38,7 @@ let questions = [
     {
         question: 'Which dog breed is most commonly used in dog race?',
         answers: [
-            { text: 'Golden Retriver', correct: false},
+            { text: 'Golden Retriever', correct: false},
             { text: 'Greyhound', correct: true },
             { text: 'Japanese Spitz', correct: false },
             { text: 'Poodle', correct: false },
@@ -55,8 +55,8 @@ let questions = [
     },
     {
         question: 'Which dog breed is one of the oldest?',
-        ansers: [
-            { text: 'Goldedn Retriver', correct: false },
+        answers: [
+            { text: 'Golden Retriever', correct: false },
             { text: 'Bullddog', correct: false },
             { text: 'Greyhound', correct: true},
             { text: 'Poodle', correct: false },
@@ -67,7 +67,7 @@ let questions = [
         answers: [
             { text: 'German Shepherd', correct: true },
             { text: 'Pug', correct: false },
-            { text: 'Labradore Retriver', correct: false },
+            { text: 'Labrador Retriever', correct: false },
             { text: 'Dalmatian', correct: false },
         ]
     },
@@ -109,7 +109,7 @@ let timerElement =
 document.getElementById('timer');
 
 function startQuiz() {
-    showQuestion(question[currentQuestionIndex]);
+    showQuestion(questions[currentQuestionIndex]);
 }
 
 function showQuestion(question) {
@@ -132,7 +132,7 @@ function showQuestion(question) {
                 incorrectCount;
             }
 
-            if (currentQuestionIndex < question.length - 1) {
+            if (currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
 
             showQuestion(questions[currentQuestionIndex]);
@@ -173,3 +173,12 @@ function resetTimer() {
     timeLeft = 15;
     startTimer();
 }
+
+function showResult() {
+    questionElement.innerText = 'Quiz completed! Your result:';
+    answerButtonsElement.innerHTML =
+    '<p>Correct answers: ${correctCount}</p>'
+    '<p>Incorrect answers: ${incorrectCount}</p>';
+}
+
+startQuiz();
