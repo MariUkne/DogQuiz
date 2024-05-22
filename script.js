@@ -76,7 +76,7 @@ let questions = [
         answers: [
             { text: 'Bulldog', correct: false },
             { text: 'Chow Chow', correct: true },
-            { text: 'Chihuahua' correct: false },
+            { text: 'Chihuahua', correct: false },
             { text: 'Pomeranian', correct: false },
         ]
     },
@@ -107,3 +107,43 @@ let incorrectElement =
 document.getElementById('incorrect');
 let timerElement = 
 document.getElementById('timer');
+
+function startQuiz() {
+    showQuestion(question[currentQuestionIndex]);
+}
+
+function showQuestion(question) {
+    questionElement.innerText = question.question;
+    answerButtonsElement.innerHTML = '';
+
+    question.answers.forEach(answer => {
+        let button =
+        document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        button.addEventListener('click', () => {
+            if (answer.correct) {
+                correctCount++;
+                correctElement.innerText = correctCount;
+                
+            } else {
+                incorrectCount++;
+                incorrectElement.innerText =
+                incorrectCount;
+            }
+
+            if (currentQuestionIndex < question.length - 1) {
+                currentQuestionIndex++;
+
+            showQuestion(questions[currentQuestionIndex]);
+            
+        } else {
+            clearInterval(timer);
+            showResult();
+        }
+     });
+
+     answerButtonsElement.appendChild(button);
+    });
+    resetTimer();
+}
