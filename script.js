@@ -90,3 +90,20 @@ let questions = [
         ]
     },
 ];
+
+let currentQuestionIndex = 0;
+let correctCount = 0;
+let incorrectCount = 0;
+let timer;
+let timeLeft = 15;
+
+let questionElement =
+document.getElementById('question');
+let answerButtonsElement =
+document.getElementById('answer-buttons');
+let correctElement =
+document.getElementById('correct');
+let incorrectElement =
+document.getElementById('incorrect');
+let timerElement = 
+document.getElementById('timer');
