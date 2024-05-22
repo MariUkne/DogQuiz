@@ -147,3 +147,29 @@ function showQuestion(question) {
     });
     resetTimer();
 }
+
+function startTimer() {
+    timerElement.innerText = timeLeft;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerElement.innerText = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            incorrectCount++;
+            incorrectElement.innerText = incorrectCount;
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length)
+                {
+                    showQuestion(questions[currentQuestionIndex]);
+                } else {
+                    showResult();
+                }
+         }
+    }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 15;
+    startTimer();
+}
