@@ -216,8 +216,28 @@ let incorrectElement =
     document.getElementById('incorrect');
 let timerElement =
     document.getElementById('timer');
+let startButton =
+    document.getElementById('startButton');
+let quizContainer =
+    document.getElementById('quiz-container');
+let controls =
+    document.getElementById('controls');
+let score =
+    document.getElementById('score');
+
+startButton.addEventListener('click', () => {
+    startButton.style.display = 'none';
+    quizContainer.style.display = 'block';
+    score.style.display = 'block';
+    startQuiz();
+});
 
 function startQuiz() {
+    currentQuestionIndex = 0;
+    correctCount = 0;
+    incorrectCount = 0;
+    correctElement.innerText = correctCount;
+    incorrectElement.innerText = incorrectCount;
     showQuestion(questions[currentQuestionIndex]);
 }
 

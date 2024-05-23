@@ -8,6 +8,11 @@
     <title>Dog Quiz</title>
     <!-- CSS Style-->
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        #quiz-container, #controls, #score {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,8 +27,10 @@
         <main>
             <img src="assets/images/pexels-edd1egalaxy-3628100.jpg" alt="Dogs" class="dog-image">
 
+        <!-- Start Button -->
+        <button id="startButton">Start Quiz</button>
+        
         <!-- Quiz Section -->
-
         <div id="quiz-container">
             <div id="question-container">
                 <h2 id="question">Question</h2>
