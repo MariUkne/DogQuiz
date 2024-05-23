@@ -6,7 +6,7 @@ body {
     color: #333;
     text-align: center;
     margin: 0; 
-    background-color: #c3c2c0;
+    background-color: #ebe9e5;
 }
 
 main {
@@ -104,7 +104,7 @@ button {
 
 
 footer {
-    background-color: #c3c2c0;
+    background-color: #ebe9e5;
     padding: 20px;
     text-align: center;
 }
