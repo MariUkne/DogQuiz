@@ -228,6 +228,7 @@ let score =
 startButton.addEventListener('click', () => {
     startButton.style.display = 'none';
     quizContainer.style.display = 'block';
+    controls.style.display = 'block';
     score.style.display = 'block';
     startQuiz();
 });
