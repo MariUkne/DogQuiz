@@ -1,3 +1,4 @@
+/* Body */
 body {
     display: flex;
     flex-direction: column;
@@ -9,24 +10,28 @@ body {
     background-color: #ebe9e5;
 }
 
+/* Main */
 main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
+/* Container */
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
+/* Logo */
 .logo {
     font-size: 48px;
     font-weight: bold;
@@ -35,6 +40,7 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Dog-image */
 .dog-image {
     width: 100%;
     height: auto;
@@ -42,6 +48,7 @@ header {
     border-radius: 40px;
 }
 
+/* Quiz-explanation*/
 #quiz-explanation {
     margin: 20px 0;
     text-align: left;
@@ -67,6 +74,7 @@ header {
     margin-bottom: 5px;
 }
 
+/* Quiz-container */
 #quiz-container {
     background-color: rgb(239, 230, 219);
     padding: 20px;
@@ -88,6 +96,7 @@ button {
     transition: 0.3s;
 }
 
+/* Restart-button */
 #restart-button {
     background-color: #a9e3d5;
     border: 2px solid #0d0d0d;
@@ -99,21 +108,24 @@ button {
     margin-top: 8px;
 }
 
+/* Controls */
 #controls {
     margin-top: 20px;
 }
 
+/* Timer */
 #timer {
     font-size: 20px;
     font-weight: bold;
 }
 
+/* Score */
 #score {
     margin-top: 20px;
     font-size: 18px;
 }
 
-
+/* Footer */
 footer {
     background-color: #ebe9e5;
     padding: 20px;
