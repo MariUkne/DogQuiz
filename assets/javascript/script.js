@@ -309,6 +309,22 @@ function showResult() {
     <p>Correct answers: ${correctCount}</p>
     <p>Incorrect answers: ${incorrectCount}</p>
   `;
+  createRestartButton();
 }
 
-startQuiz();
+function createRestartButton() {
+    let restartButton = document.createElement('button');
+    restartButton.textContent = 'Restart Quiz';
+    restartButton.onclick = restartQuiz;
+    restartButton.id = 'restart-button';
+    quizContainer.appendChild(restartButton);
+}
+
+function restartQuiz() {
+    currentQuestionIndex = '';
+    let restartButton = document.getElementById('restart-button');
+    if (restartButton) {
+        quizContainer.removeChild(restartButton);
+    }
+    startQuiz();
+}

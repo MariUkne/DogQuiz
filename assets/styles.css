@@ -88,6 +88,17 @@ button {
     transition: 0.3s;
 }
 
+#restart-button {
+    background-color: #a9e3d5;
+    border: 2px solid #0d0d0d;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
 #controls {
     margin-top: 20px;
 }
