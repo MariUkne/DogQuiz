@@ -206,23 +206,23 @@ let incorrectCount = 0;
 let timer;
 let timeLeft = 15;
 
-let questionElement =
+const questionElement =
     document.getElementById('question');
-let answerButtonsElement =
+const answerButtonsElement =
     document.getElementById('answer-buttons');
-let correctElement =
+const correctElement =
     document.getElementById('correct');
-let incorrectElement =
+const incorrectElement =
     document.getElementById('incorrect');
-let timerElement =
+const timerElement =
     document.getElementById('timer');
-let startButton =
+const startButton =
     document.getElementById('startButton');
-let quizContainer =
+const quizContainer =
     document.getElementById('quiz-container');
-let controls =
+const controls =
     document.getElementById('controls');
-let score =
+const score =
     document.getElementById('score');
 
 startButton.addEventListener('click', () => {

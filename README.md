@@ -7,11 +7,47 @@ The game is written in HTML, CSS and JavaScript.
 
 The game is live [here](https://mariukne.github.io/DogQuiz/)
 
+## Features
+
+### Home Page 
+
+- The startpage welcomes users to a simple page with a heading displaying the name of the quiz,
+
+![screenshot of the game name](assets/images/Skärmbild%202024-05-27%20095847.png)
+
+a images of dogs, 
+
+![screenshot of the dog images](assets/images/Skärmbild%202024-05-27%20095904.png)
+
+information about the game and a start button.
+
+![screenshot of the game and startbutton](assets/images/Skärmbild%202024-05-27%20095916.png)
+
+### Quiz Box 
+
+When the user clicks on the 'Start Quiz' button, the game begins, and the questions appear along with answer options, a timer set to 15 seconds, and below the score.
+
+![screenshot of the game](assets/images/Skärmbild%202024-05-27%20101049.png)
+
+### Result Box
+
+When the game is over, the user is presented with the final result and a button to restart the game.
+
+![screenshot of the result](assets/images/Skärmbild%202024-05-27%20101522.png)
+
 ## Testing
+
+### Validation
+
+Everything has been validated using the official tools
+
+- [W3C](https://validator.w3.org/)
+- [W3C:s](https://jigsaw.w3.org/css-validator/)
+- [jshint](https://jshint.com/)
 
 ### Device Testing 
 
-- The website was testing on Iphone 11, Samsung Galaxy S24 Ultra, Desktop
+- The website was testing on Iphone 11, Samsung Galaxy S24 Ultra, Microsoft Edge and Google Chrome on Desktop
 
 ### Fixed Bugs
 
