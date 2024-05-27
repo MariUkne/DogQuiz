@@ -50,11 +50,63 @@ Everything has been validated using the official tools
 ![screenshot of w3s:c validation](assets/images/Skärmbild%202024-05-27%20105500.png)
 
 - [jshint](https://jshint.com/)
+![schreenshot of jshint validation](assets/images/Skärmbild%202024-05-27%20113503.png)
 
 ### Device Testing 
 
-- The website was testing on Iphone 11, Samsung Galaxy S24 Ultra, Microsoft Edge and Google Chrome on Desktop
+- The webpage was testing on Iphone 11, Samsung Galaxy S24 Ultra, Laptop
+- Also used [amiresponsive](https://ui.dev/amiresponsive) to test the responsiveness. 
+
+### Browser Testing 
+
+- The webpage was tested on Microsoft Edge and Google Chrome with no issues.
+
+### Accessibility
+
+- The webpage scored 100% on Lighthouse accessibility tests for both mobile and desktop versions.
+
+![Screenshot lighthouse](assets/images/Skärmbild%202024-05-27%20114349.png)
+
+### Button Testing
+
+- All buttons were manually tested to ensure proper navigation and functionality.
 
 ### Fixed Bugs
 
 - The timer disappears when the user clicks the start button to begin the quiz.
+
+## Technologies
+
+### Languages
+
+- HTML
+- CSS
+- JavaScript
+
+###  Programs Used
+
+- [GitHub](https://github.com/)
+- [Am I Responsive](https://ui.dev/amiresponsive)
+- [Devtools](https://developer.chrome.com/docs/devtools/)
+- [W3C](https://www.w3.org/)
+- [Pexels](https://www.pexels.com/sv-se/)
+
+## Deployment
+
+The webpage was deployed using GitHub pages. The steps to deploy using Github pages are:
+
+- Select settings in the GitHub repository
+- From the menu on left select 'Pages'
+- Under Source select the Branch dropdown menu and select the main branch
+- Click 'Save'
+- A live link will be displayed in a green banner when published successfully.
+
+## Credits
+### Media
+- I want to give credit to Edgar Daniel Hernández Cervantes for the nice picture of the dogs from [Pexel](https://www.pexels.com/sv-se/foto/sot-djur-hundar-husdjur-3628100/)
+
+### Resources Used
+- [Code Institute](https://codeinstitute.net/se/)
+- [Skk](https://www.skk.se/) for inspiration for questions and answers.
+- [ChatGPT](https://chatgpt.com/) for inspiration for more questions and answers and for help with translating languages from Swedish to English
+- ***To my wonderful and beautiful dogs who gave me the inspiration for this quiz.***
