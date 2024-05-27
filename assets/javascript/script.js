@@ -1,3 +1,4 @@
+//Array containing questions with answer options
 let questions = [{
         question: 'Which dog breed is the largest?',
         answers: [{
@@ -200,12 +201,14 @@ let questions = [{
     },
 ];
 
+//Variables to keep track of the current question, number of correct answers, number of incorrect answers, and timer-related variables 
 let currentQuestionIndex = 0;
 let correctCount = 0;
 let incorrectCount = 0;
 let timer;
 let timeLeft = 15;
 
+//Constants to reference HTML elements
 const questionElement =
     document.getElementById('question');
 const answerButtonsElement =
@@ -225,15 +228,20 @@ const controls =
 const score =
     document.getElementById('score');
 
+//Listener for the button that starts the game when clicked
 startButton.addEventListener('click', () => {
+    //Hide the start button and show the quiz container, controls, and score
     startButton.style.display = 'none';
     quizContainer.style.display = 'block';
     controls.style.display = 'block';
     score.style.display = 'block';
+    //Start the game
     startQuiz();
 });
 
+//Function to start the game
 function startQuiz() {
+    //Reset variables and show the first question
     currentQuestionIndex = 0;
     correctCount = 0;
     incorrectCount = 0;
@@ -242,47 +250,60 @@ function startQuiz() {
     showQuestion(questions[currentQuestionIndex]);
 }
 
+//Function to display a question and its answer options
 function showQuestion(question) {
+    //Display the question text
     questionElement.innerText = question.question;
+    //Clear answer options from previous question
     answerButtonsElement.innerHTML = '';
 
+    //Loop through the answer options and create buttons for each answer
     question.answers.forEach(answer => {
         let button =
             document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
+        //Listener for the button to check if the answer is correct or not
         button.addEventListener('click', () => {
             if (answer.correct) {
+                //If the answer is correct, increment the number of correct answer and update the score
                 correctCount++;
                 correctElement.innerText = correctCount;
 
             } else {
+                //Otherwise, increment the number of incorrect answer and update the score
                 incorrectCount++;
                 incorrectElement.innerText =
                     incorrectCount;
             }
 
+            //Check if there are more questions remaining
             if (currentQuestionIndex < questions.length - 1) {
+                //If yes, show the next question
                 currentQuestionIndex++;
-
                 showQuestion(questions[currentQuestionIndex]);
-
             } else {
+                //Otherwise, show the result
                 clearInterval(timer);
                 showResult();
             }
         });
 
+        //Append the button to HTML
         answerButtonsElement.appendChild(button);
     });
+
+    //Reset the timer for each question
     resetTimer();
 }
 
+//Function to start the timer
 function startTimer() {
     timerElement.innerText = timeLeft;
     timer = setInterval(() => {
         timeLeft--;
         timerElement.innerText = timeLeft;
+        //Check if time has run out
         if (timeLeft <= 0) {
             clearInterval(timer);
             incorrectCount++;
@@ -297,12 +318,14 @@ function startTimer() {
     }, 1000);
 }
 
+//Function to reset the timer
 function resetTimer() {
     clearInterval(timer);
     timeLeft = 15;
     startTimer();
 }
 
+//Function to display the game result
 function showResult() {
     questionElement.innerText = 'Quiz completed! Your result:';
     answerButtonsElement.innerHTML = `
@@ -312,6 +335,7 @@ function showResult() {
   createRestartButton();
 }
 
+//Function to create the restart button
 function createRestartButton() {
     let restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Quiz';
@@ -320,6 +344,7 @@ function createRestartButton() {
     quizContainer.appendChild(restartButton);
 }
 
+//Function to restart the quiz
 function restartQuiz() {
     currentQuestionIndex = '';
     let restartButton = document.getElementById('restart-button');

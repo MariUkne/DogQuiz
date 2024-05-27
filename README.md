@@ -42,7 +42,13 @@ When the game is over, the user is presented with the final result and a button 
 Everything has been validated using the official tools
 
 - [W3C](https://validator.w3.org/)
+
+![screenshot of w3c validation](assets/images/Skärmbild%202024-05-27%20105256.png)
+
 - [W3C:s](https://jigsaw.w3.org/css-validator/)
+
+![screenshot of w3s:c validation](assets/images/Skärmbild%202024-05-27%20105500.png)
+
 - [jshint](https://jshint.com/)
 
 ### Device Testing 
